@@ -8,17 +8,18 @@ import Page3 from './pages/doctors/DoctorDash';
 
 import Page4 from './pages/students/StudentDash';
 
-import Home from './pages/Home';
+
+import Example from './pages/Example';
 
 const App = () => {
   return (
     <IonApp>
       <IonReactRouter>
-      <Route path="/landing" component={Home} exact />
+      <Route path="/landing" component={Example} exact />
      
-        <Route path="/patients" component={Page2} />
-        <Route path="/doctors" component={Page3} />
-        <Route path="/students" component={Page4} />
+        <Route path="/patients" component={Page2} exact />
+        <Route path="/doctors" component={Page3}  exact/>
+        <Route path="/students" component={Page4} exact />
       </IonReactRouter>
     </IonApp>
   );

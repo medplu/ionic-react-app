@@ -1,6 +1,6 @@
 import React from 'react';
 import { IonRouterOutlet, IonTabBar, IonTabButton, IonTabs, IonIcon, IonLabel } from '@ionic/react';
-import { Route} from 'react-router-dom';
+import { Route, Redirect} from 'react-router-dom';
 import { homeOutline, searchOutline, personOutline } from 'ionicons/icons';
 import DoctorPage from './DoctorPage';
 import DoctorTab1 from './DocTab1';
@@ -12,11 +12,11 @@ const DoctorTabs = () => {
   return (
     <IonTabs>
       <IonRouterOutlet>
-        <Route path="/doctors" component={DoctorPage} exact />
+        <Route path="/doctors/home" component={DoctorPage} exact />
         <Route path="/doctors/tab1" component={DoctorTab1} exact />
         <Route path="/doctors/tab2" component={DoctorTab2} exact />
         <Route path='/doctors/tab3' component={DoctorTab3} exact />
-      
+        <Redirect from="/doctors" to="/doctors/home" exact />
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
         <IonTabButton tab="home" href="/doctors/home">

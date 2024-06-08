@@ -22,6 +22,7 @@ import radIcon from "../../assets/icons/icons8-x-men-16.png";
 import paedImage from "../../assets/icons/icons8-children-51.png";
 import teethIcon from "../../assets/icons/icons8-molar-48.png";
 import mentalIcon from "../../assets/icons/icons8-advice-48.png";
+import { IonReactRouter } from "@ionic/react-router";
 
 const PatientPage = () => {
   const [authUser, setAuthUser] = useState(null);
@@ -198,7 +199,10 @@ const PatientPage = () => {
           />
         )}
       </IonContent>
+      <IonReactRouter>
       <PatientTabs />
+  </IonReactRouter>
+      
     </IonPage>
   );
 };

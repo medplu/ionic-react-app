@@ -1,10 +1,14 @@
 import React from 'react'
 import StudentTabs from './StudentTabs'
+import { IonReactRouter } from '@ionic/react-router'
 
 const StudentDash = () => {
   return (
     <div>
-      <StudentTabs />
+          <IonReactRouter>
+          <StudentTabs />
+  </IonReactRouter>
+      
     </div>
   )
 }

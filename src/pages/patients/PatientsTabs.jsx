@@ -11,11 +11,11 @@ const PatientTabs = () => {
   return (
     <IonTabs>
       <IonRouterOutlet>
-        <Route path="/patients" component={Patientdash} exact />
+        <Route path="/patients/home" component={Patientdash} exact />
         <Route path="/patients/tab1" component={PatientTab1} exact />
         <Route path="/patients/tab2" component={PatientTab2} exact />
         <Route path='/patients/tab3' component={PatientTab3} exact />
-       
+        <Redirect from="/patients" to="/patients/home" exact />
       </IonRouterOutlet>
       <IonTabBar slot="bottom">
         <IonTabButton tab="home" href="/patients/home">
