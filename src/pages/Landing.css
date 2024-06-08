@@ -1,0 +1,35 @@
+.home-container {
+  position: relative;
+}
+
+.home-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+
+.home-title {
+  color: white; /* Change this to any color that is visible on your background */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* This adds a shadow to the text to make it more readable */
+}
+
+.home-button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: orange;
+}
+
+.orange-button {
+  background-color: orange;
+  color: white; /* This changes the text color to white */
+}
+.home-logo {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
