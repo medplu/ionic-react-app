@@ -1,8 +1,12 @@
 import React, { useState } from 'react';
 import { IonPage, IonHeader, IonToolbar, IonTitle, IonContent, IonInput, IonButton, IonLabel, IonItem, IonSelect, IonSelectOption, IonToast } from '@ionic/react';
 import toast from "react-hot-toast";
+import { useHistory } from 'react-router-dom';
+import './signup.css';
+
 const SignUpPage = () => {
     const [showToast, setShowToast] = useState(false);
+    const history = useHistory();
 
   const [formData, setFormData] = useState({
     username: '',
@@ -34,7 +38,7 @@ const SignUpPage = () => {
     e.preventDefault();
   
     try {
-      const res = await fetch("http://localhost:3000/api/auth/signup", {
+      const res = await fetch("http://192.168.100.3:3000/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,6 +54,19 @@ const SignUpPage = () => {
       const data = await res.json();
             
       setShowToast(true); // Show the toast
+      switch (formData.accountType) {
+        case 'professional':
+          history.push('/doctors');
+          break;
+        case 'student':
+          history.push('/students');
+          break;
+        case 'patient':
+          history.push('/patients');
+          break;
+        default:
+          history.push('/landing');
+      }
     } catch (error) {
       console.error(error);
       toast.error(error.message);
@@ -64,7 +81,7 @@ const SignUpPage = () => {
           <IonTitle>Sign Up</IonTitle>
         </IonToolbar>
       </IonHeader>
-      <IonContent className="ion-padding">
+      <IonContent  fullscreen >
         <form onSubmit={handleSubmit}>
           <IonItem>
             <IonLabel position="floating">Username</IonLabel>

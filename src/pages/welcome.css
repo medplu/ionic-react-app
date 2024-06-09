@@ -1,0 +1,67 @@
+.welcome_container {
+    background-color: blue;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    height: 50px;
+  }
+  
+  .welcome_text {
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+  }
+  
+  .button_container {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .language_container {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: orange;
+    display: flex;
+    align-items: center;
+  }
+  .welcome_container {
+    background-color: rgba(0, 0, 255, 0.5); /* blue with 50% opacity */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .text-orange-500 {
+    color: orange;
+  }
+  @keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.fade-in {
+  animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.slide-up {
+  animation: slideUp 2s ease-in-out;
+}

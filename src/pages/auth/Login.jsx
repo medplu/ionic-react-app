@@ -14,7 +14,7 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("http://localhost:3000/api/auth/login", {
+      const res = await fetch("http://192.168.100.3:3000/api/auth/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,7 +31,7 @@ const LoginPage = () => {
       localStorage.setItem('user', JSON.stringify(data));
       setToastMessage("Logged in successfully");
       setShowToast(true);
-      history.push('/home');
+      history.push('/landing');
     } catch (error) {
       setToastMessage(error.message);
       setShowToast(true);
