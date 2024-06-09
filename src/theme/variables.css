@@ -2,6 +2,7 @@
 http://ionicframework.com/docs/theming/ */
 
 /** Ionic CSS Variables **/
+
 :root {
   /** primary **/
   --ion-color-primary: #27a961;
@@ -78,12 +79,12 @@ http://ionicframework.com/docs/theming/ */
 
 ion-content {
 
-  --ion-background-color: #f2efe5;
+  --ion-background-color: #f2efe5s;
 }
 
 :root {
 
-  --ion-toolbar-background: #f2efe5;
+  --ion-toolbar-background: #7c0c0c;
 }
 
 ion-toolbar {
@@ -93,10 +94,12 @@ ion-toolbar {
 }
 
 ion-app {
-
+  
   background-color: #f2efe5;
 }
-
+.page-container {
+  height: 100vh;
+}
 .talk-modal ion-content {
 
   --ion-background-color: white;
@@ -105,4 +108,7 @@ ion-app {
 .talk-modal ion-toolbar {
 
   --ion-toolbar-background: white;
+}
+ion-app, ion-content {
+  height: 100vh;
 }
