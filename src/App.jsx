@@ -19,7 +19,7 @@ const App = () => {
   return (
     <IonApp>
       <IonReactRouter>
-      <Route path="/landing" component={Example} exact />
+      <Route path="/" component={Example} exact />
      
         <Route path="/patients" component={Page2} exact />
         <Route path="/doctors" component={Page3}  exact/>
